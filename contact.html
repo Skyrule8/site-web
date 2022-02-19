@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="header"></div>
+	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	<label for="openSidebarMenu" class="sidebarIconToggle">
+		<div class="spinner diagonal part-1"></div>
+		<div class="spinner horizontal"></div>
+		<div class="spinner diagonal part-2"></div>
+	</label>
+	<div id="sidebarMenu">
+		<ul class="sidebarMenuInner">
+			<li><a href="index.html" target="_blank">Accueil</a></li>			
+			<li><a href="agence.html" target="_blank">L'agence</a></li>
+			<li><a href="projets.html" target="_blank">Projets</a></li>
+			<li><a href="contact.html" target="_blank">Contact</a></li>
+		</ul>
+	</div>
+	<div class="title">
+		<h3>Contactez-nous</h3>
+	</div>
+	<form class="form" name="contactform" method="post" action="sendMail.php">
+		<div class="row">
+			<div class="col" style="margin-bottom: 5%">
+				<label for="last_name">Nom <span style="color: red;">*</span></label>
+				<input name="last_name" type="text" class="form-control" placeholder="Nom" required>
+			</div>
+			<div class="col">
+				<label for="first_name">Prénom <span style="color: red;">*</span></label>
+				<input name="first_name" type="text" class="form-control" placeholder="Prénom" required>
+			</div>
+		</div>
+		<div class="row" style="margin-bottom: 5%">
+			<div class="col">
+				<label for="email">Email <span style="color: red;">*</span></label>
+				<input name="email" type="text" class="form-control" placeholder="Email" required>
+			</div>
+			<div class="col">
+				<label for="phone">Téléphone</label>
+				<input name="phone" type="text" class="form-control" placeholder="Téléphone">
+			</div>
+		</div>
+		<div class="row" style="margin-bottom: 5%" >
+			<div class="col">
+				<label for="subject">Sujet <span style="color: red;">*</span></label>
+				<input name="subject" type="text" class="form-control" placeholder="Objet de votre message" required>
+			</div>
+		</div>
+		<div class="row" style="margin-bottom: 5%" >
+			<div class="col">
+				<label for="body">Message <span style="color: red;">*</span></label>
+				<textarea name="body" class="form-control" aria-label="With textarea" placeholder="Un projet ? Une question ? Dites nous tout juste ici." rows="5" cols="33" required></textarea>
+			</div>
+		</div>
+  		<input class="btn-form" name="submit" id="submit" type="submit" value="Envoyer">
+	</form>
+</body>
+</html>
